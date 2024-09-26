@@ -42,8 +42,7 @@ namespace InventoryAPIRead.Controllers
                     Description = product.Description,
                     Price = product.Price,
                     Stock = product.Stock,
-                    CategoryId = product.CategoryId,
-                    CategoryName = product.Category?.Name
+                    CategoryId = product.CategoryId
                 });
             }
 
@@ -80,8 +79,7 @@ namespace InventoryAPIRead.Controllers
                 Description = product.Description,
                 Price = product.Price,
                 Stock = product.Stock,
-                CategoryId = product.CategoryId,
-                CategoryName = product.Category?.Name
+                CategoryId = product.CategoryId
             };
 
             return Ok(productDTO);

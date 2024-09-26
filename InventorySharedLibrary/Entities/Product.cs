@@ -9,8 +9,6 @@
         public int Stock { get; private set; }
         public int CategoryId { get; private set; }
 
-        public Category Category { get; private set; }
-
         public Product()
         {
         }
