@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "d01c1efa-2d79-4566-991f-dab04412962d",
+		"name": "Inventory API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1554187"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7293/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7293",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImp0aSI6ImVjNGYwYTllLTc2OGUtNGRkNS1iODk5LWRmOGI5Y2NlODY2MCIsImV4cCI6MTcyNzM4MTk2NiwiaXNzIjoiSW52ZW50b3J5QXBpIiwiYXVkIjoiSW52ZW50b3J5QXBpUmVhZEF1ZGllbmNlIn0.2L89GLPwLCna0zFsBaPjFHXY9RIgWmKZrcm83fv5Pw4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7196/api/CategoriesRead",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7196",
+							"path": [
+								"api",
+								"CategoriesRead"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImp0aSI6ImVjNGYwYTllLTc2OGUtNGRkNS1iODk5LWRmOGI5Y2NlODY2MCIsImV4cCI6MTcyNzM4MTk2NiwiaXNzIjoiSW52ZW50b3J5QXBpIiwiYXVkIjoiSW52ZW50b3J5QXBpUmVhZEF1ZGllbmNlIn0.2L89GLPwLCna0zFsBaPjFHXY9RIgWmKZrcm83fv5Pw4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7196/api/CategoriesRead/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7196",
+							"path": [
+								"api",
+								"CategoriesRead",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImp0aSI6ImY3M2E3OTIyLWY0NzEtNDRhMi05MDlmLTRmYmI4MmVkYTRlNiIsImV4cCI6MTcyNzM3NzY5MCwiaXNzIjoiSW52ZW50b3J5QXBpIiwiYXVkIjoiSW52ZW50b3J5QXBpUmVhZEF1ZGllbmNlIn0.gkVEETCDzyrMSOLItp4do18T72E9vMpLIN882a_6rxY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Category 1\",\n  \"description\": \"Category Description\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7114/api/CategoriesWrite",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7114",
+							"path": [
+								"api",
+								"CategoriesWrite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Updated Category\",\n  \"description\": \"Updated Description\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/CategoriesWrite/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"CategoriesWrite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/CategoriesWrite/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"CategoriesWrite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory Movements",
+			"item": [
+				{
+					"name": "Get Movement by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/InventoryMovementRead/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"InventoryMovementRead",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Inventory Movement",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productId\": 1,\n  \"movementType\": \"IN\",\n  \"quantity\": 10\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/InventoryMovementWrite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"InventoryMovementWrite"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/ProductsRead",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ProductsRead"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/ProductsRead/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ProductsRead",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Product 1\",\n  \"description\": \"Product Description\",\n  \"price\": 100,\n  \"stock\": 50,\n  \"categoryId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ProductsWrite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ProductsWrite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Updated Product\",\n  \"description\": \"Updated Description\",\n  \"price\": 150,\n  \"stock\": 60,\n  \"categoryId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ProductsWrite/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ProductsWrite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/ProductsWrite/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ProductsWrite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
