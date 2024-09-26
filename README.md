@@ -44,16 +44,14 @@ InventorySolution/
 ```
 
 
-## Ejecución 🛠️
+## Creación de contenedores para docker 🛠️
 
 Para ejecutar el proyecto debes usar el comando:
 ```bash
-  npm run deploy
-```
-en la ruta donde se encuentra el archivo 
-```bash
   docker-compose.yml
 ```
+en la ruta donde se encuentra el archivo 
+
 - **Ejecutar** el archivo **docker-compose.yml**
 - **Comando** 
 
