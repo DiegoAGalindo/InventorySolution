@@ -1,0 +1,6 @@
+@InventoryAPIAuth_HostAddress = http://localhost:5104
+
+GET {{InventoryAPIAuth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
