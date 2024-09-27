@@ -52,8 +52,6 @@ Para ejecutar el proyecto debes usar el comando:
 ```
 en la ruta donde se encuentra el archivo 
 
-- **Ejecutar** el archivo **docker-compose.yml**
-- **Comando** 
 
 ## Aplicar migraciones
 
